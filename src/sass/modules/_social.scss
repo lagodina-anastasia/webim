@@ -1,0 +1,45 @@
+.social {
+    font-size: 0;
+    margin-top: 50px;
+    &-desc {
+        max-width: 600px;
+    }
+    li {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    a {
+        @extend %flex-sc;
+        &:hover {
+            span {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    div {
+        margin-left: 30px;
+    }
+    span {
+        color: #0da088;
+        font-size: 18px;
+        line-height: 24px;
+        border-bottom: 1px solid #0da088;
+    }
+}
+@media all and (min-width: 768px) {
+    .social {
+        li {
+            width: 50%;
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    .social {
+        margin-top: 70px;
+        li {
+            width: 33.333333%;
+            margin-bottom: 40px;
+        }
+    }
+}

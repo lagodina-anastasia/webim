@@ -1,0 +1,114 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+.webfont-loaded body {
+    font-family: Ubuntu, sans-serif;
+}
+body {
+    position: relative;
+    min-height: 100%;
+    color: #74757b;
+    font: 400 18px/1 sans-serif;
+    background-color: #fff;
+    padding-top: 70px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+header, main, footer {
+    width: 100%;
+}
+header, main {
+    position: relative;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+li {
+    list-style: none;
+    vertical-align: top;
+}
+a, a:hover, a:active {
+    text-decoration: none;
+    outline: none;
+}
+a {
+    color: inherit;
+    @extend %tr;
+}
+svg {
+    overflow: visible;
+    fill: currentColor;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+textarea {
+    resize: none;
+    overflow-y: hidden;
+}
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+button:focus, input:focus {
+    outline: none;
+    box-shadow: none;
+}
+input {
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    &::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+    &:focus {
+        outline-offset: -2px;
+    }
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+::-ms-clear {
+    display: none;
+}
+select::-ms-expand {
+    display: none;
+}
+@media all and (min-width: 1200px) {
+    body {
+        padding-top: 0;
+    }
+}

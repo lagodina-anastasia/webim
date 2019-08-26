@@ -1,0 +1,46 @@
+.info {
+    margin-top: 55px;
+    li {
+        position: relative;
+        padding-left: 40px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 8px;
+            left: 0;
+            background-color: #3b4269;
+            border-radius: 100%;
+        }
+        + li {
+            margin-top: 30px;
+        }
+        p {
+            max-width: 790px;
+            margin-top: 13px;
+        }
+    }
+    &__title {
+        color: #0da088;
+        font-size: 20px;
+        line-height: 1.1;
+        border-bottom: 1px solid currentColor;
+    }
+}
+@media all and (min-width: 1025px) {
+    .info {
+        margin-top: 70px;
+        &__title {
+            font-size: 24px;
+        }
+        li {
+            &:before {
+                top: 11px;
+            }
+            + li {
+                margin-top: 45px;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.green-link {
+    color: #0da088;
+    border-bottom: 1px solid currentColor;
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}

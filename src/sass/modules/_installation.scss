@@ -1,0 +1,36 @@
+.installation {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 28px;
+    padding-left: 30px;
+    margin-right: 50px;
+    margin-top: 40px;
+    &__num {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: transparentize(#393e6b, 0.85);
+        font-size: 100px;
+        font-weight: 700;
+    }
+    &__icon {
+        display: block;
+        margin-bottom: 30px;
+    }
+}
+@media all and (min-width: 1025px) {
+    .installation {
+        margin-top: 55px;
+        padding-top: 67px;
+        padding-left: 0;
+        margin-right: 150px;
+        &__num {
+            left: -53px;
+            font-size: 150px;
+        }
+        &__icon {
+            margin-bottom: 40px;
+        }
+    }
+}

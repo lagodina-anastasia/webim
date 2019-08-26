@@ -1,0 +1,42 @@
+.steps {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.step {
+    @extend %flex-sc;
+    color: #393e6b;
+    margin-bottom: 30px;
+    &__icon {
+        margin-right: 35px;
+    }
+}
+.steps-buttons {
+    a {
+        width: 100%;
+    }
+    .blue-btn {
+        margin-top: 20px;
+    }
+}
+@media all and (min-width: 560px) {
+    .steps-buttons {
+        a {
+            width: auto;
+        }
+        .blue-btn {
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    .steps {
+        margin-top: 60px;
+        margin-bottom: 75px;
+    }
+    .step {
+        b {
+            font-size: 24px;
+        }
+    }
+}

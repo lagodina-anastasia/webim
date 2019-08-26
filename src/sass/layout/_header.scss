@@ -1,0 +1,128 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
+    z-index: 100;
+    &__wrap {
+        @extend %flex-sc;
+        position: relative;
+        height: 100%;
+        padding: 0 20px;
+        max-width: 1920px;
+    }
+    &-burger {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        min-width: 24px;
+        height: 18px;
+        background: linear-gradient(to right, $green 0%, $green 100%) center repeat-x;
+        background-size: 100% 2px;
+        cursor: pointer;
+        @extend %tr;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            background-color: $green;
+            transform-origin: 0 50%;
+            @extend %tr;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+        &.active {
+            background: transparent;
+            &:before {
+                width: 30px;
+                top: -2px;
+                transform: rotate(42deg)
+            }
+            &:after {
+                width: 30px;
+                bottom: -2px;
+                transform: rotate(-42deg)
+            }
+        }
+    }
+    &-logo {
+        display: inline-block;
+        width: 115px;
+        margin: 0 auto;
+        img {
+            @extend %img;
+        }
+    }
+    &-login, &-nav {
+        color: #733e6b;
+        font-size: 18px;
+        text-transform: uppercase;
+        li {
+            display: inline-block;
+            @extend %hover;
+        }
+    }
+    &-login {
+        li {
+            margin-right: 30px;
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    .header {
+        &-login, &-nav {
+            display: none;
+        }
+        &-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 20px 0;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
+            z-index: 100;
+            li {
+                width: 100%;
+            }
+            a {
+                display: block;
+                padding: 10px 40px;
+            }
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    .header {
+        &-burger {
+            display: none;
+        }
+        &-nav {
+            display: block !important;
+            margin-left: auto;
+            margin-right: 26px;
+            li {
+                display: inline-block;
+                margin-left: 18px;
+            }
+        }
+        &-logo {
+            margin: 0;
+        }
+    }
+}
+@media all and (min-width: 1200px) {
+    .header {
+        position: relative;
+        height: 100px;
+        padding: 0 70px;
+    }
+}

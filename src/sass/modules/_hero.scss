@@ -1,0 +1,38 @@
+.hero {
+    &__desc {
+        max-width: 665px;
+        margin-bottom: 30px;
+    }
+    &__buttons {
+        a {
+            width: 100%;
+        }
+        .white-btn {
+            min-width: 256px;
+            margin-top: 20px;
+        }
+    }
+}
+@media all and (min-width: 560px) {
+    .hero {
+        &__buttons {
+            a {
+                width: auto;
+            }
+            .white-btn {
+                margin-top: 0;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    .hero {
+        &__title {
+            font-size: 36px;
+        }
+        &__desc {
+            margin-bottom: 55px;
+        }
+    }
+}
